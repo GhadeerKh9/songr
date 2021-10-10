@@ -37,9 +37,9 @@ public class mainController {
     @GetMapping("/album")
     public String getClassInformation(Model model) {
         List<Album> list = new ArrayList<>();
-        Album Album1 = new Album("Sara", "Happiness", 1000, 1000, "lllllll");
-        Album Album2 = new Album("Sara", "Happiness", 1000, 1000, "lllllll");
-        Album Album3 = new Album("Sara", "Happiness", 1000, 1000, "lllllll");
+        Album Album1 = new Album("Jadal", "La Tloo' Al-Daww", 1000, 1000, "https://i.ytimg.com/vi/4ADGYRJ4kIQ/maxresdefault.jpg");
+        Album Album2 = new Album("Julia Boutross", "Yawman ma", 1000, 1000, "https://i1.sndcdn.com/artworks-000025826032-rfb25v-t500x500.jpg");
+        Album Album3 = new Album("Rami Esam", "Segni-Bil-Alwan", 1000, 1000, "https://lyricstranslate.com/files/styles/large/public/12523840_1030903076953677_6196382277839151779_n.jpg?itok=vOQZhaJf");
 
 
        list.add(Album1);
