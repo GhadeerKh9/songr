@@ -45,7 +45,7 @@ public class mainController {
        list.add(Album1);
        list.add(Album2);
        list.add(Album3);
-    model.addAttribute("list", list);
+       model.addAttribute("list", list);
 
         return "albums";
     }
