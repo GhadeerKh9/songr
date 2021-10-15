@@ -11,25 +11,36 @@
 
 <style >
     .body {
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
+
  background-color: #DCBABA;
     }
 </style>
 
 
+<div>
+
+    <form action="albums" method="post">
+        <p>title</p><input type="text" name="title"/></br>
+        <p>Artist</p><input type="text" name="artist"/></br>
+        <p>songCount</p><input type="text" name="songCount"/></br>
+        <p>length</p><input type="text" name="length"/></br>
+        <p>imageUrl</p><input type="text" name="imageUrl"/></br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
 <body class=" body">
 
-        <div class="card" style="width: 18rem;">
-            <img th:src="${list.get(0).getImageUrl()}" class="card-img-top">
+        <div class="card" style="width: 18rem;"   th:each="album : ${albums}">
+            <img th:src="${album.imgUrl}" class="card-img-top">
 
             <div class="card-body">
-                <h5 class="card-title" th:text="${list.get(0).getTitle()}"></h5>
+                <h5 class="card-title" th:text="${album.title}"></h5>
                 <div class="card-text">
-                    <p th:text="'Artist : '+${list.get(0).getArtist()}"></p>
-                    <p th:text="'Count : '+${list.get(0).getSongCount()}"></p>
-                    <p th:text="'Length : '+${list.get(0).getLength()}+' Seconds'"></p>
+                    <p th:text="'Artist : '+${album.artist}"></p>
+                    <p th:text="'Count : '+${album.songCount"></p>
+                    <p th:text="'Length : '+${album.length}+' Seconds'"></p>
                 </div>
 
             </div>
@@ -37,33 +48,7 @@ justify-content: space-evenly;
 
 
 
-        <div class="card" style="width: 18rem;">
-            <img th:src="${list.get(1).getImageUrl()}" class="card-img-top" alt="album image">
 
-            <div class="card-body">
-                <h5 class="card-title" th:text="${list.get(1).getTitle()}"></h5>
-                <div class="card-text">
-                    <p th:text="'Artist : '+${list.get(1).getArtist()}"></p>
-                    <p th:text="'Songs Count : '+${list.get(1).getSongCount()}"></p>
-                    <p th:text="'Length : '+${list.get(1).getLength()} +' Seconds'"></p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img th:src="${list.get(2).getImageUrl()}" class="card-img-top" alt="album image">
-
-            <div class="card-body">
-                <h5 class="card-title" th:text="${list.get(2).getTitle()}"></h5>
-                <div class="card-text">
-                    <p th:text="'Artist : '+${list.get(2).getArtist()}"></p>
-                    <p th:text="'Songs Count : '+${list.get(2).getSongCount()}"></p>
-                    <p th:text="'Length : '+${list.get(2).getLength()} +' Seconds'"></p>
-                </div>
-
-            </div>
-        </div>
 
 </body>
 </html>
