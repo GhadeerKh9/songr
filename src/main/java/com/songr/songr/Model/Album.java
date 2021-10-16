@@ -13,9 +13,6 @@ import java.util.List;
     private Long id;
 
 
-        public Album( ) {
-        }
-
 
     private String artist;
     private String title;
@@ -23,7 +20,8 @@ import java.util.List;
     private int  songCount;
     private String imageUrl;
 
-
+        public Album( ) {
+        }
 
 
     public Album(String artist, String title, int length, int songCount, String imageUrl) {

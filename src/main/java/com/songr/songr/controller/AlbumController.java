@@ -35,7 +35,7 @@ public class AlbumController {
 
     }
 
-////when clicking submit you'll save albums in database and will be redirected to => albums,,aka same html page
+//when clicking submit you'll save albums in database and will be redirected to => albums,,aka same html page
 
     @PostMapping("/albums")
     public RedirectView createAlbum(@ModelAttribute Album album) {
