@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head >
+
+<style >
+    .body {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+ background-color: #DCBABA;
+    }
+</style>
+
+
+<body class=" body">
+
+<div class="card" style="width: 18rem;">
+    <img th:src="${list.get(0).getImageUrl()}" class="card-img-top">
+
+    <div class="card-body">
+        <h5 class="card-title" th:text="${list.get(0).getTitle()}"></h5>
+        <div class="card-text">
+            <p th:text="'Artist : '+${list.get(0).getArtist()}"></p>
+            <p th:text="'Count : '+${list.get(0).getSongCount()}"></p>
+            <p th:text="'Length : '+${list.get(0).getLength()}+' Seconds'"></p>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="card" style="width: 18rem;">
+    <img th:src="${list.get(1).getImageUrl()}" class="card-img-top" alt="album image">
+
+    <div class="card-body">
+        <h5 class="card-title" th:text="${list.get(1).getTitle()}"></h5>
+        <div class="card-text">
+            <p th:text="'Artist : '+${list.get(1).getArtist()}"></p>
+            <p th:text="'Songs Count : '+${list.get(1).getSongCount()}"></p>
+            <p th:text="'Length : '+${list.get(1).getLength()} +' Seconds'"></p>
+        </div>
+
+    </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+    <img th:src="${list.get(2).getImageUrl()}" class="card-img-top" alt="album image">
+
+    <div class="card-body">
+        <h5 class="card-title" th:text="${list.get(2).getTitle()}"></h5>
+        <div class="card-text">
+            <p th:text="'Artist : '+${list.get(2).getArtist()}"></p>
+            <p th:text="'Songs Count : '+${list.get(2).getSongCount()}"></p>
+            <p th:text="'Length : '+${list.get(2).getLength()} +' Seconds'"></p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
