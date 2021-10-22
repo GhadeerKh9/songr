@@ -4,3 +4,4 @@
 * Use HTML files to wrapp the parameters and the to design your pages.
 * Run the code
 * Test it.
+to run server on terminal, the command is grdale bootRun
